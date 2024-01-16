@@ -1,0 +1,11 @@
+{
+  "buildCommand": "cd frontend-body && npm install && npm run build",
+  "outputDirectory": "frontend-body/dist",
+  "framework": "vite",
+  "rewrites": [
+    {
+      "source": "/api/(.*)",
+      "destination": "/backend-body/src/index.ts"
+    }
+  ]
+}
