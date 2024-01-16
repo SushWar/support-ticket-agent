@@ -1,6 +1,6 @@
 {
-  "buildCommand": "cd frontend-body && npm install && npm run build",
-  "outputDirectory": "frontend-body/dist",
+  "buildCommand": "cd Frontend-Body && npm install && npm run build",
+  "outputDirectory": "Frontend-Body/dist",
   "framework": "vite",
   "rewrites": [
     {
