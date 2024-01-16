@@ -1,10 +1,10 @@
 {
   "builds": [
     {
-      "src": "Backend-Soul/dist/index.js",
+      "src": "/Backend-Soul/dist/index.js",
       "use": "@vercel/node",
       "config": { "includeFiles": ["dist/"] }
     }
   ],
-  "routes": [{ "src": "/api/(.*)", "dest": "Backend-Soul/dist/index.js" }]
+  "routes": [{ "src": "/api/(.*)", "dest": "/Backend-Soul/dist/index.js" }]
 }
