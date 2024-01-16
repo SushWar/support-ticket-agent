@@ -4,14 +4,7 @@
       "src": "Backend-Soul/dist/index.js",
       "use": "@vercel/node",
       "config": { "includeFiles": ["dist/"] }
-    },
-    {
-      "src": "/Frontend-Body/dist/index.html",
-      "use": "@vercel/static-build"
     }
   ],
-  "routes": [
-    { "src": "/api/(.*)", "dest": "/Backend-Soul/dist/index.js" },
-    { "src": "/(.*)", "dest": "/Frontend-Body/dist/index.html" }
-  ]
+  "routes": [{ "src": "/api/(.*)", "dest": "/Backend-Soul/dist/index.js" }]
 }
