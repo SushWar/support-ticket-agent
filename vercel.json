@@ -6,5 +6,5 @@
       "config": { "includeFiles": ["dist/"] }
     }
   ],
-  "routes": [{ "src": "/api/(.*)", "dest": "/Backend-Soul/dist/index.js" }]
+  "routes": [{ "src": "/api/(.*)", "dest": "Backend-Soul/dist/index.js" }]
 }
