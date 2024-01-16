@@ -1,23 +1,22 @@
 {
   "builds": [
     {
-      "src": "/Backend-Soul/dist/index.js",
-      "use": "@vercel/node",
-      "config": { "includeFiles": ["dist/**"] }
+      "src": "/Backend-Soul/**",
+      "use": "@vercel/node"
     },
     {
-      "src": "/Frontend-Body/dist/index.html",
+      "src": "/Frontend-Body/**",
       "use": "@vercel/static-build"
     }
   ],
-  "rewrites": [
+  "routes": [
     {
-      "source": "/api/(.*)",
-      "destination": "/Backend-Soul/dist/index.js"
+      "src": "/api/(.*)",
+      "dest": "/Backend-Soul/$1"
     },
     {
-      "source": "/(.*)",
-      "destination": "/Frontend-Body/dist/index.html"
+      "src": "/(.*)",
+      "dest": "/Frontend-Body/$1"
     }
   ]
 }
