@@ -1,11 +1,16 @@
 {
-  "buildCommand": "cd Frontend-Body && npm install && npm run build",
-  "outputDirectory": "Frontend-Body/dist",
-  "framework": "vite",
-  "rewrites": [
+  "builds": [
     {
-      "source": "/api/(.*)",
-      "destination": "/Backend-Soul/src/index.ts"
+      "src": "/Backend-Soul/**",
+      "use": "@vercel/node"
+    },
+    {
+      "src": "/Frontend-Body/**",
+      "use": "@vercel/static"
     }
+  ],
+  "routes": [
+    { "src": "/api/(.*)", "dest": "/Backend-Soul/$1" },
+    { "src": "/(.*)", "dest": "/Frontend-Body/$1" }
   ]
 }
