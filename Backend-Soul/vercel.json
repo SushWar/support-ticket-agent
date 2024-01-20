@@ -7,9 +7,9 @@
       "config": { "includeFiles": ["dist/**"] }
     }
   ],
-  "routes": [
+  "rewrites": [
     {
-      "src": "/(.*)",
+      "src": "/api/(.*)",
       "dest": "dist/index.js"
     }
   ]
