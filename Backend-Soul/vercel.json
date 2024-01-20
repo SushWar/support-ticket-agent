@@ -9,8 +9,8 @@
   ],
   "rewrites": [
     {
-      "src": "/api/(.*)",
-      "dest": "dist/index.js"
+      "source": "/api/(.*)",
+      "destination": "dist/index.js"
     }
   ]
 }
